@@ -1,0 +1,32 @@
+name: "backend"
+mode: "dev"
+port: 8081
+version: "v0.0.1"
+start_time: "2021-02-09"
+machine_id: 1
+
+auth:
+  jwt_expire: 8760
+
+log:
+  level: "debug"
+  filename: "./log/backend_test.log"
+  max_size: 1000
+  max_age: 3600
+  max_backups: 5
+
+mysql:
+  host: "rm-2ze813cv79ou4qik3no.mysql.rds.aliyuncs.com"
+  port: 3306
+  user: "wangbo"
+  password: "!Wangbo981016"
+  dbname: "backend_test"
+  max_open_conns: 200
+  max_idle_conns: 50
+
+redis:
+  host: "127.0.0.1"
+  port: 6379
+  password: ""
+  db: 0
+  pool_size: 100
